@@ -5,7 +5,7 @@ def sudoku_validator(grid):
     for block in grid:
         if set(block) != {1,2,3,4,5,6,7,8,9}:
             return False
-            
+
     for i in range(9):
         test = []
         for j in range(9):
@@ -13,7 +13,7 @@ def sudoku_validator(grid):
 
         if set(test) != {1,2,3,4,5,6,7,8,9}:
             return False
-    
+
     seg = [list(zip(*(iter(row),) * 3)) for row in grid]
     seg = list(zip(*(iter(seg),) * 3))
 
